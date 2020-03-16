@@ -1,13 +1,23 @@
 <template>
-  <div>category</div>
+  <div>
+    <scroll class="content">
+     
+    </scroll>
+  </div>
 </template>
 
 <script>
-export default {
+import Scroll from "components/common/scroll/Scroll";
 
-}
+export default {
+  components: {
+    Scroll
+  }
+};
 </script>
 
-<style>
+<style scoped>
+.content {
 
+}
 </style>

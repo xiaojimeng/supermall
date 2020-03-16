@@ -1,10 +1,9 @@
 import axios from 'axios'
 export function request(params) {
   const instance = axios.create({
-    // baseURL = "http://123.207.32.32:8000/api/wh" 
-    // baseURL = "http://106.54.54.237:8000/api/wh" 
-    baseURL: 'http://106.54.54.237:8000/api/wh',
-    timeout: 5 * 1000
+    // baseURL: "http://123.207.32.32:8000/api/wh",
+    baseURL : "http://106.54.54.237:8000/api/wh" ,
+    timeout: 10 * 1000
   })
   // 请求拦截器
   instance.interceptors.request.use(config => {
@@ -14,7 +13,7 @@ export function request(params) {
   })
   // 响应拦截器
   instance.interceptors.response.use(res => {
-    return res.data.data
+    return res.data
   }, err => {
     console.log(err);
   })
